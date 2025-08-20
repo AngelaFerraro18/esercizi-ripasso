@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
 function PoliticianList() {
 
@@ -20,18 +20,27 @@ function PoliticianList() {
 
     useEffect(() => { politicsFetch() }, []);
 
+    // card 
+    function Card({ data }) {
+
+        console.log('Card dei politici.')
+        return <ul>
+            {data.length > 0 ? (data.map(p => <li key={p.id}>
+                <h4>{p.name}</h4>
+                <img src={p.image} alt={p.name} />
+                <p>Position: {p.position}</p>
+                <p>Bio: {p.biography}</p>
+            </li>)) : <p>Nessun politico trovato!</p>}
+        </ul>
+    }
+
+    const PoliticianCard = React.memo(Card);
+
     return (
         <>
             <h1>Lista politici</h1>
             <input type="text" value={search} onChange={e => setSearch(e.target.value)} />
-            <ul>
-                {filteredPoliticians.length > 0 ? (filteredPoliticians.map(p => <li key={p.id}>
-                    <h4>{p.name}</h4>
-                    <img src={p.image} alt={p.name} />
-                    <p>Position: {p.position}</p>
-                    <p>Bio: {p.biography}</p>
-                </li>)) : <p>Nessun politico trovato!</p>}
-            </ul>
+            <PoliticianCard data={filteredPoliticians} />
         </>
     )
 }
