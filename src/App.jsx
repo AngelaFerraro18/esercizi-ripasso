@@ -7,11 +7,13 @@ import ParentChild from "./components/ParentChild"
 import ParentFour from "./components/ParentFour"
 import ParentSecond from "./components/ParentSecond"
 import ParentThird from "./components/ParentThird"
+import PoliticianList from "./components/PoliticianList"
 
 function App() {
 
   return (
     <>
+      <PoliticianList />
       <Fibonacci />
       <Catalog />
       <Parent />
