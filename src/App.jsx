@@ -3,7 +3,7 @@ import { CountProvider } from "./components/CountProvider"
 import Fibonacci from "./components/Fibonacci"
 import MarkdownPlayground from "./components/MarkdownPlayground"
 import Parent from "./components/Parent"
-
+import ParentChild from "./components/ParentChild"
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
       <Parent />
       <CountProvider />
       <MarkdownPlayground />
+      <ParentChild />
     </>
   )
 }
