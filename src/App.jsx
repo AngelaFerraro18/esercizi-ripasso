@@ -1,3 +1,4 @@
+import Autocomplete from "./components/Autocomplete"
 import Catalog from "./components/Catalog"
 import Counter from "./components/Counter"
 import { CountProvider } from "./components/CountProvider"
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <Autocomplete />
       <Counter />
       <PoliticianList />
       <Fibonacci />
