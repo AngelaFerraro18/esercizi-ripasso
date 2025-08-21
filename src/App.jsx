@@ -1,4 +1,5 @@
 import Catalog from "./components/Catalog"
+import Counter from "./components/Counter"
 import { CountProvider } from "./components/CountProvider"
 import Fibonacci from "./components/Fibonacci"
 import MarkdownPlayground from "./components/MarkdownPlayground"
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <Counter />
       <PoliticianList />
       <Fibonacci />
       <Catalog />
