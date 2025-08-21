@@ -6,6 +6,7 @@ import CounterRef from "./components/CounterRef"
 import { CountProvider } from "./components/CountProvider"
 import Fibonacci from "./components/Fibonacci"
 import FocusInput from "./components/FocusInput"
+import InputWithPrevious from "./components/InputWithPrevious"
 import MarkdownPlayground from "./components/MarkdownPlayground"
 import Parent from "./components/Parent"
 import ParentChild from "./components/ParentChild"
@@ -14,11 +15,16 @@ import ParentSecond from "./components/ParentSecond"
 import ParentThird from "./components/ParentThird"
 import PoliticianList from "./components/PoliticianList"
 import PreviousValueInput from "./components/PreviousValueInput"
+import ThemeSwitcher from "./components/ThemeSwitcher"
+import ToggleComponent from "./components/ToggleComponent"
 
 function App() {
 
   return (
     <>
+      <InputWithPrevious />
+      <ThemeSwitcher />
+      <ToggleComponent />
       <CheckboxCounter />
       <PreviousValueInput />
       <FocusInput />
