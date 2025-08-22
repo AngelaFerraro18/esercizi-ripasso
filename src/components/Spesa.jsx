@@ -15,10 +15,26 @@ function Spesa() {
 
     function addToCart(product) {
         setAddedProduct(prev => {
-            if (prev.some(item => item.name === product.name)) return prev;
-            return [...prev, { ...product, quantity: 1 }]
-        })
+            const existing = prev.find(p => p.name === product.name);
+            if (existing) {
+                return prev.map(p =>
+                    p.name === product.name ? { ...p, quantity: p.quantity + 1 } : p
+                );
+            } else {
+                return [...prev, { ...product, quantity: 1 }];
+            }
+        });
     }
+
+    function removeFromCart(product) {
+        setAddedProduct(prev => prev.filter(item => item.name !== product.name))
+    }
+
+    const total = addedProduct.reduce(
+        (acc, p) => acc + p.price * p.quantity,
+        0
+    );
+
     return (
         <>
             <h2>Lista della spesa</h2>
@@ -30,13 +46,17 @@ function Spesa() {
                 </li>)}
             </ul>
             {
-                addedProduct.length > 0 && (
+                addedProduct && addedProduct.length > 0 && (
                     <>
                         <h3>Carrello</h3>
                         <ul>
                             {addedProduct.map((p, index) => <li key={index}>
                                 {p.name} - {p.price} --- Quantità: {p.quantity}
-                            </li>)}
+
+                                <button onClick={() => removeFromCart(p)}>Rimuovi</button>
+                            </li>
+                            )}
+                            <span>{total.toFixed(2)} euro</span>
                         </ul>
                     </>
                 )
