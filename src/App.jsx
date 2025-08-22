@@ -16,6 +16,7 @@ import ParentThird from "./components/ParentThird"
 import PoliticianList from "./components/PoliticianList"
 import PreviousValueInput from "./components/PreviousValueInput"
 import SnackHooks from "./components/SnackHooks"
+import Spesa from "./components/Spesa"
 import ThemeSwitcher from "./components/ThemeSwitcher"
 import TodoList from "./components/TodoList"
 import ToggleComponent from "./components/ToggleComponent"
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <Spesa />
       <TodoList />
       <SnackHooks />
       <InputWithPrevious />
