@@ -8,6 +8,7 @@ import Fibonacci from "./components/Fibonacci"
 import FocusInput from "./components/FocusInput"
 import InputWithPrevious from "./components/InputWithPrevious"
 import MarkdownPlayground from "./components/MarkdownPlayground"
+import NoteApp from "./components/NoteApp"
 import Parent from "./components/Parent"
 import ParentChild from "./components/ParentChild"
 import ParentFour from "./components/ParentFour"
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <NoteApp />
       <Spesa />
       <TodoList />
       <SnackHooks />
