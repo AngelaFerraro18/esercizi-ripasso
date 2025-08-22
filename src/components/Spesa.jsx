@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 
 const products = [
@@ -9,26 +9,29 @@ const products = [
 ];
 
 
-function Spesa() {
+function reducer(state, action) {
+    switch (action.type) {
+        case 'ADD':
 
-    const [addedProduct, setAddedProduct] = useState([]);
-
-    function addToCart(product) {
-        setAddedProduct(prev => {
-            const existing = prev.find(p => p.name === product.name);
+            const existing = state.find(p => p.name === action.payload.name);
             if (existing) {
-                return prev.map(p =>
-                    p.name === product.name ? { ...p, quantity: p.quantity + 1 } : p
+                return state.map(p =>
+                    p.name === action.payload.name ? { ...p, quantity: p.quantity + 1 } : p
                 );
             } else {
-                return [...prev, { ...product, quantity: 1 }];
-            }
-        });
-    }
+                return [...state, { ...action.payload, quantity: 1 }];
+            };
 
-    function removeFromCart(product) {
-        setAddedProduct(prev => prev.filter(item => item.name !== product.name))
+        case 'REMOVE':
+            return state.filter(item => item.name !== action.payload.name);
+        default:
+            return state;
     }
+}
+
+function Spesa() {
+
+    const [addedProduct, dispatch] = useReducer(reducer, []);
 
     const total = addedProduct.reduce(
         (acc, p) => acc + p.price * p.quantity,
@@ -42,7 +45,7 @@ function Spesa() {
                 {products.map((p, index) => <li key={index}>
                     <h4>{p.name}</h4>
                     <span> Prezzo: {p.price}</span>
-                    <button onClick={() => addToCart(p)}>Aggiungi al carrello</button>
+                    <button onClick={() => dispatch({ type: 'ADD', payload: p })}>Aggiungi al carrello</button>
                 </li>)}
             </ul>
             {
@@ -53,7 +56,7 @@ function Spesa() {
                             {addedProduct.map((p, index) => <li key={index}>
                                 {p.name} - {p.price} --- Quantità: {p.quantity}
 
-                                <button onClick={() => removeFromCart(p)}>Rimuovi</button>
+                                <button onClick={() => dispatch({ type: 'REMOVE', payload: p })}>Rimuovi</button>
                             </li>
                             )}
                             <span>{total.toFixed(2)} euro</span>
