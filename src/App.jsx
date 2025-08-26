@@ -18,6 +18,7 @@ import ParentThird from "./components/ParentThird"
 import PoliticianList from "./components/PoliticianList"
 import PreviousValueInput from "./components/PreviousValueInput"
 import SnackHooks from "./components/SnackHooks"
+import Somma from "./components/Somma"
 import Spesa from "./components/Spesa"
 import ThemeSwitcher from "./components/ThemeSwitcher"
 import TodoList from "./components/TodoList"
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <>
+      <Somma />
       <FocusInput2 />
       <NoteApp />
       <Spesa />
