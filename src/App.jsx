@@ -1,6 +1,7 @@
 import Autocomplete from "./components/Autocomplete"
 import Catalog from "./components/Catalog"
 import CheckboxCounter from "./components/CheckboxCounter"
+import Contatore from "./components/Contatore"
 import Counter from "./components/Counter"
 import CounterRef from "./components/CounterRef"
 import { CountProvider } from "./components/CountProvider"
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <>
+      <Contatore />
       <SalvaNome />
       <Lista2 />
       <Numeri />
