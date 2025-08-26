@@ -8,8 +8,10 @@ import Fibonacci from "./components/Fibonacci"
 import FocusInput from "./components/FocusInput"
 import FocusInput2 from "./components/FocusInput2"
 import InputWithPrevious from "./components/InputWithPrevious"
+import Lista2 from "./components/Lista2"
 import MarkdownPlayground from "./components/MarkdownPlayground"
 import NoteApp from "./components/NoteApp"
+import Numeri from "./components/Numeri"
 import Parent from "./components/Parent"
 import ParentChild from "./components/ParentChild"
 import ParentFour from "./components/ParentFour"
@@ -17,6 +19,7 @@ import ParentSecond from "./components/ParentSecond"
 import ParentThird from "./components/ParentThird"
 import PoliticianList from "./components/PoliticianList"
 import PreviousValueInput from "./components/PreviousValueInput"
+import SalvaNome from "./components/SalvaNome"
 import SnackHooks from "./components/SnackHooks"
 import Somma from "./components/Somma"
 import Spesa from "./components/Spesa"
@@ -28,6 +31,9 @@ function App() {
 
   return (
     <>
+      <SalvaNome />
+      <Lista2 />
+      <Numeri />
       <Somma />
       <FocusInput2 />
       <NoteApp />
