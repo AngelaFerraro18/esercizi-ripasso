@@ -6,6 +6,7 @@ import CounterRef from "./components/CounterRef"
 import { CountProvider } from "./components/CountProvider"
 import Fibonacci from "./components/Fibonacci"
 import FocusInput from "./components/FocusInput"
+import FocusInput2 from "./components/FocusInput2"
 import InputWithPrevious from "./components/InputWithPrevious"
 import MarkdownPlayground from "./components/MarkdownPlayground"
 import NoteApp from "./components/NoteApp"
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <FocusInput2 />
       <NoteApp />
       <Spesa />
       <TodoList />
