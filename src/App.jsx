@@ -5,11 +5,13 @@ import CheckboxCounter from "./components/CheckboxCounter"
 import Contatore from "./components/Contatore"
 import Contatore2 from "./components/Contatore2"
 import Counter from "./components/Counter"
+import Counter2 from "./components/Counter2"
 import CounterReducer from "./components/CounterReducer"
 import CounterReducer2 from "./components/CounterReducer2"
 import CounterRef from "./components/CounterRef"
 import CounterWithHook from "./components/COunterWithHook"
 import { CountProvider } from "./components/CountProvider"
+import DebounceSearch from "./components/DebounceSearch"
 import Fibonacci from "./components/Fibonacci"
 import FilterList from "./components/FilterList"
 import FocusInput from "./components/FocusInput"
@@ -22,6 +24,7 @@ import Lista3 from "./components/Lista3"
 import LocalStorageInput from "./components/LocalStorageInput"
 import MarkdownPlayground from "./components/MarkdownPlayground"
 import NoteApp from "./components/NoteApp"
+import NumberList from "./components/NumberList"
 import Numeri from "./components/Numeri"
 import Numeri2 from "./components/Numeri2"
 import Parent from "./components/Parent"
@@ -53,6 +56,10 @@ function App() {
 
   return (
     <>
+      <DebounceSearch />
+      <FilterList2 />
+      <Counter2 />
+      <NumberList />
       <RefCounter />
       <Chat />
       <Switch />
