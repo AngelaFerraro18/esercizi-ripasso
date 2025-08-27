@@ -1,5 +1,6 @@
 import Autocomplete from "./components/Autocomplete"
 import Catalog from "./components/Catalog"
+import Chat from "./components/Chat"
 import CheckboxCounter from "./components/CheckboxCounter"
 import Contatore from "./components/Contatore"
 import Contatore2 from "./components/Contatore2"
@@ -32,6 +33,7 @@ import PersistentInput from "./components/PersistentInput"
 import PoliticianList from "./components/PoliticianList"
 import PoliticiansList from "./components/PoliticiansList"
 import PreviousValueInput from "./components/PreviousValueInput"
+import RefCounter from "./components/RefCounter"
 import SalvaNome from "./components/SalvaNome"
 import SalvaNome2 from "./components/SalvaNome2"
 import SnackHooks from "./components/SnackHooks"
@@ -51,6 +53,8 @@ function App() {
 
   return (
     <>
+      <RefCounter />
+      <Chat />
       <Switch />
       <PoliticiansList />
       <FilterList2 />
