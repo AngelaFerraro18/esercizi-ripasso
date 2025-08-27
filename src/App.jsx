@@ -30,6 +30,7 @@ import ParentSecond from "./components/ParentSecond"
 import ParentThird from "./components/ParentThird"
 import PersistentInput from "./components/PersistentInput"
 import PoliticianList from "./components/PoliticianList"
+import PoliticiansList from "./components/PoliticiansList"
 import PreviousValueInput from "./components/PreviousValueInput"
 import SalvaNome from "./components/SalvaNome"
 import SalvaNome2 from "./components/SalvaNome2"
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <PoliticiansList />
       <FilterList2 />
       <FocusComponent />
       <LocalStorageInput />
