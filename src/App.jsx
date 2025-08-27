@@ -39,6 +39,7 @@ import Somma from "./components/Somma"
 import Somma2 from "./components/Somma2"
 import Spesa from "./components/Spesa"
 import SquareCalculator from "./components/SquareCalculator"
+import Switch from "./components/Switch"
 import ThemeSwitcher from "./components/ThemeSwitcher"
 import TodoList from "./components/TodoList"
 import ToggleComponent from "./components/ToggleComponent"
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <>
+      <Switch />
       <PoliticiansList />
       <FilterList2 />
       <FocusComponent />
