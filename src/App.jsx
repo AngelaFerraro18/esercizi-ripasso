@@ -13,6 +13,7 @@ import CounterWithHook from "./components/COunterWithHook"
 import { CountProvider } from "./components/CountProvider"
 import DebounceSearch from "./components/DebounceSearch"
 import Fibonacci from "./components/Fibonacci"
+import FilterFruits from "./components/FilterFruits"
 import FilterList from "./components/FilterList"
 import FocusInput from "./components/FocusInput"
 import FocusInput2 from "./components/FocusInput2"
@@ -44,6 +45,7 @@ import Somma from "./components/Somma"
 import Somma2 from "./components/Somma2"
 import Spesa from "./components/Spesa"
 import SquareCalculator from "./components/SquareCalculator"
+import SumNumbers from "./components/SumNumbers"
 import Switch from "./components/Switch"
 import ThemeSwitcher from "./components/ThemeSwitcher"
 import TodoList from "./components/TodoList"
@@ -57,6 +59,8 @@ function App() {
 
   return (
     <>
+      <FilterFruits />
+      <SumNumbers />
       <UsernameCheck />
       <DebounceSearch />
       <FilterList2 />
