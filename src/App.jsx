@@ -49,6 +49,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher"
 import TodoList from "./components/TodoList"
 import ToggleComponent from "./components/ToggleComponent"
 import ToggleComponent2 from "./components/ToggleComponent2"
+import UsernameCheck from "./components/UsernameCheck"
 import FilterList2 from "./FilterList2"
 import FocusComponent from "./FocusComponent"
 
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <>
+      <UsernameCheck />
       <DebounceSearch />
       <FilterList2 />
       <Counter2 />
