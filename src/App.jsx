@@ -1,4 +1,5 @@
 import Autocomplete from "./components/Autocomplete"
+import CallbackDemo from "./components/CallbackDemo"
 import Catalog from "./components/Catalog"
 import Chat from "./components/Chat"
 import CheckboxCounter from "./components/CheckboxCounter"
@@ -6,12 +7,14 @@ import Contatore from "./components/Contatore"
 import Contatore2 from "./components/Contatore2"
 import Counter from "./components/Counter"
 import Counter2 from "./components/Counter2"
+import Counter3 from "./components/Counter3"
 import CounterReducer from "./components/CounterReducer"
 import CounterReducer2 from "./components/CounterReducer2"
 import CounterRef from "./components/CounterRef"
 import CounterWithHook from "./components/COunterWithHook"
 import { CountProvider } from "./components/CountProvider"
 import DebounceSearch from "./components/DebounceSearch"
+import ExpensiveCalculation from "./components/ExpensiveCalculation"
 import Fibonacci from "./components/Fibonacci"
 import FilterFruits from "./components/FilterFruits"
 import FilterList from "./components/FilterList"
@@ -45,6 +48,7 @@ import Somma from "./components/Somma"
 import Somma2 from "./components/Somma2"
 import Spesa from "./components/Spesa"
 import SquareCalculator from "./components/SquareCalculator"
+import StorageInput2 from "./components/StorageInput2"
 import SumNumbers from "./components/SumNumbers"
 import Switch from "./components/Switch"
 import ThemeSwitcher from "./components/ThemeSwitcher"
@@ -59,6 +63,10 @@ function App() {
 
   return (
     <>
+      <StorageInput2 />
+      <CallbackDemo />
+      <ExpensiveCalculation />
+      <Counter3 />
       <FilterFruits />
       <SumNumbers />
       <UsernameCheck />
